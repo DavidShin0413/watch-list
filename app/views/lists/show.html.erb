@@ -1,0 +1,6 @@
+<h1><%= @list.name %></h1>
+
+<p><%= link_to "+Add a movie", new_list_bookmark_path(@list) %></p>
+
+<p><%= link_to "-Delete this list", list_path(@list), method: :delete %>
+<p><%= link_to "Back to list", lists_path %></p>
