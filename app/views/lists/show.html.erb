@@ -1,5 +1,12 @@
 <h1><%= @list.name %></h1>
 
+<ul>
+<% @list.bookmarks.each do |bookmark|%>
+  <li><%= bookmark.movie.title %><%= link_to "Delete", bookmark_path(bookmark), method: :delete %>
+  <br><%= bookmark.comment %></li>
+<% end %>
+</ul>
+
 
 <p><%= link_to "+Add a movie", new_list_bookmark_path(@list) %></p>
 
